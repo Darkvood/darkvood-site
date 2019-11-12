@@ -3,9 +3,10 @@
 
 .main-slide {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   padding-top: 65px;
   padding-bottom: 45px;
+  overflow: hidden;
 
   &__bg {
     overflow: hidden;
@@ -15,21 +16,61 @@
     right: 0;
     bottom: 0;
     top: 0;
+
+    @media (max-width: @desktop) {
+      background-image: url("/img/bg-mobile.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &-video {
+      display: none;
+
+      @media (min-width: @desktop) {
+        display: block;
+      }
+
+      @media (max-width: @desktop) {
+        height: 100%;
+      }
+    }
   }
 
   &__content {
-    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     font-family: "Fjalla One", sans-serif;
     color: white;
+    height: 100%;
+    justify-content: center;
   }
 
   &__name {
-    opacity: 0.8;
-    font-size: 72px;
+    font-size: 7rem;
+    transition-duration: 0.2s;
+
+    @media (max-width: @desktop) {
+      font-size: 10rem;
+    }
+
+    @media (max-width: @mobileWide) {
+      font-size: 4rem;
+    }
   }
 
   &__spec {
     opacity: 0.6;
-    font-size: 43px;
+    font-size: 2rem;
+    transition-duration: 0.2s;
+
+    @media (max-width: @desktop) {
+      font-size: 3rem;
+    }
+
+    @media (max-width: @mobileWide) {
+      font-size: 1.5rem;
+    }
   }
 }

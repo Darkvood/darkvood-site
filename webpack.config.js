@@ -57,6 +57,10 @@ module.exports = {
       {
         from: resolve(__dirname, "src/video"),
         to: resolve(__dirname, "dist/video")
+      },
+      {
+        from: resolve(__dirname, "src/img"),
+        to: resolve(__dirname, "dist/img")
       }
     ])
   ]
