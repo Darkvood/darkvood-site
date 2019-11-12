@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
+  mode: process.env.NODE_ENV,
   entry: resolve(__dirname, "src/index.js"),
   output: {
     path: resolve(__dirname, "dist"),
