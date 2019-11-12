@@ -1,8 +1,8 @@
 const resolve = require("path").resolve;
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
-console.log(process.env.NODE_ENV);
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: resolve(__dirname, "src/index.js"),
@@ -46,11 +46,18 @@ module.exports = {
     port: 8080
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "base.css"
     }),
     new HtmlWebpackPlugin({
       template: resolve(__dirname, "src/index.html")
-    })
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: resolve(__dirname, "src/video"),
+        to: resolve(__dirname, "dist/video")
+      }
+    ])
   ]
 };

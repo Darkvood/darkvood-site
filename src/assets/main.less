@@ -1,2 +1,35 @@
 @import "reset.less";
 @import "base.less";
+
+.main-slide {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 65px;
+  padding-bottom: 45px;
+
+  &__bg {
+    overflow: hidden;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+
+  &__content {
+    padding: 80px 0;
+    font-family: "Fjalla One", sans-serif;
+    color: white;
+  }
+
+  &__name {
+    opacity: 0.8;
+    font-size: 72px;
+  }
+
+  &__spec {
+    opacity: 0.6;
+    font-size: 43px;
+  }
+}
