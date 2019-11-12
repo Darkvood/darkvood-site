@@ -27,7 +27,7 @@ const needToScroll = stages.length - 1;
 
 export function onWheel(event, nameEl, specEl) {
   // scroll top
-  if (event.wheelDeltaY > 0) {
+  if (event.deltaY < 0) {
     pos = Math.max(pos - 1, 0);
   }
   // scroll bottom
