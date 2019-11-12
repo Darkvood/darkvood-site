@@ -1,0 +1,9 @@
+# dist
+dist
+
+# modules
+node_modules
+
+# editor
+/.idea
+/.vscode
