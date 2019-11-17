@@ -4,9 +4,9 @@ import { onWheel } from "./wheel";
 document.addEventListener("DOMContentLoaded", bootstrap);
 
 function bootstrap() {
-  const mainSlide = document.getElementById("main-slide");
+  const mainSection = document.getElementById("main-section");
   const nameEl = document.getElementById("name-el");
   const specEl = document.getElementById("spec-el");
 
-  mainSlide.addEventListener("wheel", e => onWheel(e, nameEl, specEl));
+  mainSection.addEventListener("wheel", e => onWheel(e, nameEl, specEl));
 }

@@ -1,7 +1,7 @@
 @import "reset.less";
 @import "base.less";
 
-.main-slide {
+.main {
   position: relative;
   height: 100vh;
   padding-top: 65px;
@@ -72,5 +72,31 @@
     @media (max-width: @mobileWide) {
       font-size: 1.5rem;
     }
+  }
+}
+
+.about {
+  padding: 40px 20px;
+  max-width: 815px;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__text {
+    margin-top: 15px;
+  }
+}
+
+.feature {
+  margin-top: 25px;
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    padding-left: 20px;
+    list-style: disc;
   }
 }

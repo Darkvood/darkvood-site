@@ -15,11 +15,11 @@ const stages = [
   },
   {
     name: { size: "15" },
-    spec: { size: "6" }
+    spec: { size: "7" }
   },
   {
     name: { size: "19" },
-    spec: { size: "9" }
+    spec: { size: "12" }
   }
 ];
 
