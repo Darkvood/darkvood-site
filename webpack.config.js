@@ -52,7 +52,8 @@ module.exports = {
       filename: "base.css"
     }),
     new HtmlWebpackPlugin({
-      template: resolve(__dirname, "src/index.html")
+      template: resolve(__dirname, "src/index.html"),
+      hash: true
     }),
     new CopyWebpackPlugin([
       {
