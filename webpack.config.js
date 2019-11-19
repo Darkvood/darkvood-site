@@ -49,7 +49,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: "base.css"
+      filename: "assets/styles/base.css"
     }),
     new HtmlWebpackPlugin({
       template: resolve(__dirname, "src/index.html"),
@@ -57,12 +57,9 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {
-        from: resolve(__dirname, "src/video"),
-        to: resolve(__dirname, "dist/video")
-      },
-      {
-        from: resolve(__dirname, "src/img"),
-        to: resolve(__dirname, "dist/img")
+        from: resolve(__dirname, "src/assets"),
+        to: resolve(__dirname, "dist/assets"),
+        ignore: ["*.less"]
       }
     ])
   ]

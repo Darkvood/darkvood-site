@@ -1,4 +1,4 @@
-import "./assets/main";
+import "./assets/styles/main";
 import { onWheel } from "./wheel";
 
 document.addEventListener("DOMContentLoaded", bootstrap);
