@@ -1,5 +1,6 @@
 const resolve = require("path").resolve;
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
@@ -43,6 +44,7 @@ module.exports = {
   },
   devServer: {
     contentBase: resolve(__dirname, "dist"),
+    watchContentBase: true,
     compress: true,
     port: 8080
   },
@@ -53,8 +55,10 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: resolve(__dirname, "src/index.html"),
+      alwaysWriteToDisk: true,
       hash: true
     }),
+    new HtmlWebpackHarddiskPlugin(),
     new CopyWebpackPlugin([
       {
         from: resolve(__dirname, "src/assets"),

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", bootstrap);
 
 function bootstrap() {
   const fonts = document.createElement("link");
-  fonts.href = "https://fonts.googleapis.com/css?family=Fjalla+One|Roboto:400,700&amp;display=swap";
+  fonts.href = "https://fonts.googleapis.com/css?family=Fjalla+One|Roboto:400,700&display=swap";
   fonts.rel = "stylesheet";
 
   document.head.appendChild(fonts);
