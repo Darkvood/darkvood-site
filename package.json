@@ -1,17 +1,17 @@
 {
   "name": "darkvood-site",
   "version": "1.0.0",
-  "description": "",
+  "description": "personal home page",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --open --hot --hide-modules --mode=development",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --open --hot --hide-modules",
     "build": "cross-env NODE_ENV=production webpack --hide-modules"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Darkvood/darkvood-site.git"
   },
-  "author": "",
+  "author": "Danil Katuhin <the.darkvood@mail.ru>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Darkvood/darkvood-site/issues"
